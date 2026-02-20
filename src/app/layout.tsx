@@ -1,4 +1,5 @@
 import React from "react";
+import { Provider } from "@/components/ui/provider";
 
 export default function RootLayout({
   children,
@@ -6,8 +7,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <Provider>{children}</Provider>
+      </body>
     </html>
   );
 }

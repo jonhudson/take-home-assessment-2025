@@ -10,21 +10,24 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "esnext",
-    "moduleResolution": "node",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "noEmit": true,
     "resolveJsonModule": true,
     "rootDir": ".",
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": false,
-    "target": "es6",
+    "target": "ESNext",
     "plugins": [
       {
         "name": "next"
       }
-    ]
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"]
+  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx", "src/__tests__/api/voterRegDeadlines.spec.mts", "src/__tests__/api/voterRegDeadlines.spec.mts"]
 }
